@@ -1,8 +1,5 @@
 [build]
-builder = "nixpacks"
-
-[build.nixpacks]
-pkgs = ["php84-extensions.pgsql"]
+builder = "dockerfile"
 
 [deploy]
-startCommand = "vendor/bin/heroku-php-apache2 public/"
+startCommand = "apache2-foreground"
